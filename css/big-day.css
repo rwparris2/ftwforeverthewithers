@@ -598,19 +598,6 @@ section.section-hero {
     background-color: #f4f4f4;
     z-index: 1
 }
-section.section-hero:after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border: 3em solid transparent;
-    z-index: 2;
-    bottom: 0;
-    left: 0;
-    border-bottom-color: #fff;
-    border-left-color: #fff
-}
 section.section-hero .owl-carousel {
     z-index: 1
 }
