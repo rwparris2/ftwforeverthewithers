@@ -315,46 +315,8 @@
 		</ul>
 	</section>
 
-	<section id="rsvp" class="section-rsvp bg-light-gray">
-		<h2>RSVP</h2>
-		<div class="section-intro">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic deserunt praesentium repellat, modi, debitis nihil quam
-				tempore eligendi facere dolor laudantium dignissimos sequi officia, repudiandae porro aliquam fuga fugiat eveniet.</p>
-		</div>
-		<form action="php/rsvp.php" class="rsvp" name="rsvp-form" id="rsvp-form">
-			<div class="form-wrapper flex-responsive">
-				<div class="left">
-					<input type="text" placeholder="Name" name="name" id="rsvp-form-name">
-					<input type="email" placeholder="Email" name="email" id="rsvp-form-email">
-					<input type="tel" placeholder="Mobile Phone" name="mobile-phone" id="rsvp-form-mobile-phone">
-					<input type="number" placeholder="Total Number of Guests" name="number-of-guests" id="rsvp-form-number-of-guests" min="1"
-					 max="5">
-				</div>
-				<div class="right">
-					<ul class="events">
-						<li class="flex-responsive" data-event="wedding-ceremony">
-							<img class="img-as-bg" src="img/placeholders/800x800.png" alt="">
-							<p>Wedding Ceremony</p>
-						</li>
-						<li class="flex-responsive" data-event="wedding-dinner">
-							<img class="img-as-bg" src="img/placeholders/800x800.png" alt="">
-							<p>Wedding Dinner</p>
-						</li>
-						<li class="flex-responsive" data-event="wedding-party">
-							<img class="img-as-bg" src="img/placeholders/800x800.png" alt="">
-							<p>Wedding Party</p>
-						</li>
-					</ul>
-					<select multiple name="events" id="rsvp-form-events">
-								<option value="wedding-ceremony">Wedding Ceremony</option>
-								<option value="wedding-dinner">Wedding Dinner</option>
-								<option value="wedding-party">Wedding Party</option>
-							</select>
-				</div>
-			</div>
-			<input type="submit" value="Submit" class="btn btn-primary">
-		</form>
-		<div id="message"></div>
+	<section id="rsvp" class="section-rsvp">
+		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_BQpv2FsBn9XI-Wx8voEP7O45YLMacyFKGrYA5KTdUcYm9Q/viewform?embedded=true" width="100%" height="1530" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 	</section>
 
 	<section id="hotels" class="section-events">
@@ -525,6 +487,34 @@
 	<script src="js/parallax.js"></script>
 	<script src="js/rsvp.js"></script>
 	<script src="js/main.js"></script>
+	
+	<!-- Form submission handler to GoogleDocs -->
+	<script data-cfasync="false" type="text/javascript">
+		function postToGoogle() {
+			var field1 = $("input[type='radio'][name='qs1']:checked").val();
+			var field2 = $('#feed').val();
+
+			$.ajax({
+				url: "https://docs.google.com/forms/d/e/1FAIpQLSdjOTKRb7YiWi8OGPq6M6CRL0TpuAsUKacKp2XgruMbIp4wzg/formResponse",
+				data: {
+					"entry.924752166": field1,
+					"entry.997497831": field2
+				},
+				type: "POST",
+				dataType: "xml",
+				statusCode: {
+					0: function () {
+						//Success message
+					},
+					200: function () {
+						//Success Message
+					}
+				}
+			});
+		}
+
+	</script>
+
 
 </body>
 
