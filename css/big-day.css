@@ -1097,17 +1097,17 @@ section.section-people .row {
     margin-left: -1rem;
     margin-right: -1rem
 }
-section.section-people .row .col-sm-3 {
+section.section-people .row .person-col {
     padding-left: 1rem;
     padding-right: 1rem
 }
-section.section-people .row .col-sm-3:hover .profile-pic {
+section.section-people .row .person-col:hover .profile-pic {
     -webkit-filter: contrast(100%);
     -moz-filter: contrast(100%);
     -ms-filter: contrast(100%);
     filter: contrast(100%)
 }
-section.section-people .row .col-sm-3 .profile-pic {
+section.section-people .row .person-col .profile-pic {
     padding-top: 100%;
     background-position: center center;
     background-size: cover;
@@ -1119,7 +1119,7 @@ section.section-people .row .col-sm-3 .profile-pic {
     -moz-transition: all .3s ease;
     transition: all .3s ease
 }
-section.section-people .row .col-sm-3 h4 {
+section.section-people .row .person-col h4 {
     text-align: center;
     font-weight: 400;
     margin: .5em 0 0;
