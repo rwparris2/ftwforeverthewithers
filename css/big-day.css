@@ -997,6 +997,11 @@ section.section-story ul.timeline>li .meta .date {
     transform: translateY(-100%);
     color: #9B9B9B
 }
+@media only screen and (max-width: 1200px) {
+	section.section-story ul.timeline>li .meta .date {
+		font-size: 2vw;
+	}
+}
 section.section-story ul.timeline>li .desc {
     overflow: hidden;
     padding-left: 4em;
@@ -1045,11 +1050,25 @@ section.section-events ul.event-list>li .event-details ul.event-info {
     font-weight: 700;
     line-height: 1.8
 }
-section.section-events ul.event-list>li .event-details ul.event-info>li span {
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-icon {
     display: inline-block;
     color: #E86C6C;
-    width: 2em
+		width: 2em;
+		vertical-align: top;
+		padding: calc(1.5em / 4) 0;
 }
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-addr {
+	display: inline-block;
+	line-height: 1.5em;
+}
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-addr a:link,
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-addr a:visited {
+	color: black ;
+}
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-addr:hover a,
+section.section-events ul.event-list>li .event-details ul.event-info>li .event-info-addr a:hover {
+	color: #E86C6C !important;
+} 
 section.section-events ul.event-list>li .event-details .desc {
     color: #9B9B9B;
     max-width: 100%
