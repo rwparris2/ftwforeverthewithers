@@ -430,7 +430,8 @@ body>footer {
     padding: 4rem 8rem;
     position: relative;
     background-color: #f4f4f4;
-    text-align: center
+		text-align: center;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2)
 }
 body>footer:after {
     position: absolute;
